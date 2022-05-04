@@ -1,5 +1,5 @@
 const { sequelize } = require("./src/data/db");
-const app = require("./index");
+const { app } = require("./index");
 
 const main = async () => {
   try {
@@ -13,4 +13,4 @@ const main = async () => {
   }
 };
 
-main();
+module.exports = main;
