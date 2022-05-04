@@ -1,6 +1,4 @@
 const { Sequelize } = require("sequelize");
-console.log(process.env.DB);
-
 const sequelize = new Sequelize(process.env.DB, {
   dialectOptions: {
     ssl: {
