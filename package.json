@@ -21,6 +21,7 @@
   "homepage": "https://github.com/leandromartinez236/ecommerce-fares-G3-backend#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.18.1",
     "morgan": "^1.10.0",
     "pg": "^8.7.3",
