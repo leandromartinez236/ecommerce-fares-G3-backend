@@ -8,6 +8,16 @@ const sequelize = new Sequelize(process.env.DATABASE, {
     },
   },
 });
+const main = async () => {
+  try {
+    await sequelize.sync({ force: true });
+    await sequelize.authenticate();
+    console.log("Connection has been established secessfully");
+  } catch (error) {
+    console.log(error);
+  }
+};
+main();
 
 module.exports = {
   sequelize,
