@@ -1,6 +1,6 @@
-import { DataTypes } from "sequelize";
-import { sequelize } from "../data/db.js";
-export const Product = sequelize.define("product", {
+const { DataTypes } = require("sequelize");
+const { sequelize } = require("../data/db.js");
+const Product = sequelize.define("product", {
   //name, description,price,stock,image,category
   id: {
     type: DataTypes.INTEGER,
@@ -23,3 +23,6 @@ export const Product = sequelize.define("product", {
     type: DataTypes.INTEGER,
   },
 });
+module.exports = {
+  Product,
+};

@@ -1,11 +1,13 @@
-// const express = require("express");
-// const morgan = require("morgan");
-// const app = express();
+const express = require("express");
+const morgan = require("morgan");
+require("dotenv").config();
+const main = require("./server");
+const productRoutes = require("./src/routes/products.routes");
+const app = express();
+main();
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(morgan("dev"));
+app.use(productRoutes);
 
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
-// app.use(morgan("dev"));
-// app.use(productsRoutes);
-
-// app.listen(3000);
-// console.log("Server is running at port 3000");
+module.exports = app;
