@@ -1,5 +1,5 @@
 const { Sequelize } = require("sequelize");
-console.log(process.env.DB)
+console.log(process.env.DB);
 
 const sequelize = new Sequelize(process.env.DB, {
   dialectOptions: {
@@ -9,7 +9,6 @@ const sequelize = new Sequelize(process.env.DB, {
     },
   },
 });
-
 const main = async () => {
   try {
     await sequelize.sync({ force: true });
@@ -19,7 +18,6 @@ const main = async () => {
     console.log(error);
   }
 };
-
 main();
 
 module.exports = sequelize;

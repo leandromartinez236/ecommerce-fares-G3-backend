@@ -10,14 +10,14 @@ const Categories = sequelize.define("categories", {
   typeCategory: {
     type: DataTypes.ENUM(
       "pc-armada",
-      "hardware",
-      "perifericos",
-      "notebooks",
-      "monitores",
-      "impresoras",
-      "telefonos",
-      "camaras",
-      "drones"
+      "hardware"
+      // "perifericos",
+      // "notebooks",
+      // "monitores",
+      // "impresoras",
+      // "telefonos",
+      // "camaras",
+      // "drones"
     ),
     defaultValue: "pending",
     allowNull: false,
@@ -26,4 +26,4 @@ const Categories = sequelize.define("categories", {
 
 module.exports = {
   Categories,
-}
+};
