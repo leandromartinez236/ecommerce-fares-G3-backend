@@ -9,7 +9,7 @@ const sequelize = new Sequelize(process.env.DB, {
 });
 const main = async () => {
   try {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
     await sequelize.authenticate();
     console.log("Connection has been established secessfully");
   } catch (error) {

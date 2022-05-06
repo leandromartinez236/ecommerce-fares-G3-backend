@@ -11,9 +11,9 @@ const getAllCategory = async (req, res) => {
 };
 
 const createCategory = async (req, res) => {
-  const { name, description } = req.body;
+  const { name, description, productId } = req.body;
   try {
-    const createNewCategory = await Category.create({ name, description });
+    const createNewCategory = await Category.create({ name, description, productId });
     res.status(200).json(createNewCategory);
   } catch (error) {
     console.log(error);

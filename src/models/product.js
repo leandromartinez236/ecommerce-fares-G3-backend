@@ -14,10 +14,10 @@ const Product = sequelize.define("product", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  // price: {
-  //   type: DataTypes.NUMBER,
-  //   allowNull: false,
-  // },
+  price: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
   stock: {
     type: DataTypes.INTEGER,
   },

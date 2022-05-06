@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 require("dotenv").config();
+require('./src/asociations/asociations')
 
 const categoryRoutes = require('./src/routes/category.routes')
 const productRoutes = require("./src/routes/products.routes");
