@@ -9,7 +9,7 @@ const {
   getProductCategory,
   deleteCategoryProduct,
   createCategoryProduct,
-  // getProductQuery,
+  getProductQuery,
 } = require("../controllers/products");
 
 router.get("/products/category", getProductCategory);
@@ -24,6 +24,6 @@ router.delete(
   "/products/:idProduct/category/:idCategory",
   deleteCategoryProduct
 );
+router.get("/products/search", getProductQuery);
 router.get("/products/:id", getOneProduct);
-// router.get("/products", getProductQuery);
 module.exports = router;
