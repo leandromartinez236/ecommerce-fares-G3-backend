@@ -125,6 +125,7 @@ const getOneProduct = async (req, res) => {
   }
 };
 
+<<<<<<< HEAD
 const getProductQuery = async (req, res) => {
   const { name } = req.query;
   const nameSpace = name.replace("%20", " ")
@@ -141,6 +142,9 @@ const getProductQuery = async (req, res) => {
     return res.status(500).json({ message: error.message });
   }
 };
+=======
+const getProductQuery = async (req, res) => {};
+>>>>>>> feature/modeluser
 
 module.exports = {
   getProducts,
@@ -151,7 +155,6 @@ module.exports = {
   getProductByCategory,
   deleteCategoryProduct,
   createCategoryProduct,
-  //----
   getProductCategory,
   getProductQuery,
 };
