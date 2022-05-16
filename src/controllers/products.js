@@ -124,19 +124,9 @@ const getOneProduct = async (req, res) => {
     return res.status(500).json({ message: error.message });
   }
 };
-/*
-const getProductQuery = async (req, res) => {
-  try {
-    // const { name, description } = req.query;
-    // console.log(name, description);
-    console.log(req.query);
-    // const result = await Product.findByPk(id);
-    // res.status(200).json(result);
-  } catch (error) {
-    return res.status(500).json({ message: error.message });
-  }
-};
-*/
+
+const getProductQuery = async (req, res) => {};
+
 module.exports = {
   getProducts,
   createProduct,
@@ -146,7 +136,6 @@ module.exports = {
   getProductByCategory,
   deleteCategoryProduct,
   createCategoryProduct,
-  //----
   getProductCategory,
-  // getProductQuery,
+  getProductQuery,
 };
