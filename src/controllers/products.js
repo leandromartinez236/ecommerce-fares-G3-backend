@@ -127,14 +127,14 @@ const getOneProduct = async (req, res) => {
 
 const getProductQuery = async (req, res) => {
   const { name } = req.query;
-  const nameSpace = name.replace("%20", " ")
+  const nameSpace = name.replace("%20", " ");
   try {
     const getProductQuery = await Product.findAll({
       where: { name: nameSpace },
-      include: { model: Category }
+      include: { model: Category },
     });
-    if(!getProductQuery || undefined) {
-      return res.status(400).json({msg: 'product not found'})
+    if (!getProductQuery || undefined) {
+      return res.status(400).json({ msg: "product not found" });
     }
     res.status(200).json(getProductQuery);
   } catch (error) {
@@ -151,7 +151,6 @@ module.exports = {
   getProductByCategory,
   deleteCategoryProduct,
   createCategoryProduct,
-  //----
   getProductCategory,
   getProductQuery,
 };
