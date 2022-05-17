@@ -1,8 +1,8 @@
 const sequelize = require("../data/db");
 const { DataTypes } = require("sequelize");
 
-const ListOrder = sequelize.define(
-  "ListOrder",
+const LineOrder = sequelize.define(
+  "lineOrder",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -17,12 +17,16 @@ const ListOrder = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-  },
-  {
-    freezeTableName: true,
+    price: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    },
+  }, {
+    updatedAt: false,
+    createdAt: false
   }
 );
 
 module.exports = {
-  ListOrder,
+  LineOrder,
 };
