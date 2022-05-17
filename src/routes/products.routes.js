@@ -28,9 +28,7 @@ router.delete(
   "/products/:idProduct/category/:idCategory",
   deleteCategoryProduct
 );
-<<<<<<< HEAD
+
 router.get("/products/search", getProductQuery);
-router.get("/products/:id", getOneProduct);
-=======
->>>>>>> feature/modeluser
+
 module.exports = router;
