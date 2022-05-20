@@ -13,8 +13,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev"));
 
-app.use(categoryRoutes);
-app.use(productRoutes);
-app.use(usersRoutes);
+app.use("/api", categoryRoutes);
+app.use("/api", productRoutes);
+app.use("/api", usersRoutes);
 
 app.listen(3000, () => console.log("Server corriendo"));
