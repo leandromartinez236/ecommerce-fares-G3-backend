@@ -1,11 +1,13 @@
 const { Sequelize } = require("sequelize");
+const pg = require("pg");
 const sequelize = new Sequelize(process.env.DB, {
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false,
-    },
-  },
+  dialectModule: pg,
+  // dialectOptions: {
+  //   ssl: {
+  //     require: true,
+  //     rejectUnauthorized: false,
+  //   },
+  // },
 });
 const main = async () => {
   try {

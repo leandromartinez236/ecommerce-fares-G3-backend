@@ -2,12 +2,12 @@ const express = require("express");
 const morgan = require("morgan");
 require("dotenv").config();
 
-const categoryRoutes = require("./src/routes/category.routes");
-const productRoutes = require("./src/routes/products.routes");
-const usersRoutes = require("./src/routes/user.routes");
-const orderRoutes = require("./src/routes/order.routes");
+const categoryRoutes = require("./api/routes/category.routes");
+const productRoutes = require("./api/routes/products.routes");
+const usersRoutes = require("./api/routes/user.routes");
+const orderRoutes = require("./api/routes/order.routes");
 
-require("./src/asociations/asociations");
+require("./api/asociations/asociations");
 const app = express();
 
 app.use(express.json());
